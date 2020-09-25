@@ -1,0 +1,990 @@
+@import 'mixins';
+
+* {
+    margin:0;
+    padding:0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing:inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size:62.5%;
+    font-family: "Baloo Tammudu 2",sans-serif;
+}
+
+.container-1{
+    height:min-content;
+    background-image: linear-gradient(to bottom,rgba(255,255,255,0.4),rgba(255,255,255,0.8)), url(../images/header2.jfif);
+}
+
+.navigation{
+    display:flex;
+    height:8rem;
+    width:100%;
+    justify-content:space-between;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+
+    @include break(b7){
+        height:6rem;
+    }
+    
+
+    &-1{
+        margin:auto 2rem;
+        font-size: 3.5rem;
+        margin-left: 3%;
+        color:black;
+        @include break(b4){
+            flex:1;
+        }
+    }
+    &-2{
+        margin:auto 2rem;
+        margin-left:0%;
+        display: flex;
+        @include break(b4){
+            display:none;
+        }
+        
+        &-links{
+            text-decoration: none;
+            font-size:1.7rem;
+            margin:auto 1.5rem;
+            color:#777;
+            font-weight: 500;
+            &:hover{
+                color:#000;
+            }
+        }
+        &-active{
+            color:rgb(211, 118, 232);
+            &:hover{
+                color:rgb(255,118,232);
+            }
+        }
+    }
+    &-3{
+        margin:auto 2rem;
+        display: flex;
+        height:100%;
+        font-family:"Roboto",sans-serif;
+        @include break(b4){
+            display:none;
+        }
+
+        &-login{
+            font-size:1.85rem;
+            margin:auto;
+            margin-right:2rem;
+            border-radius:1rem;
+            color:rgb(63, 66, 212);
+            border:2px solid rgb(63, 66, 212);
+            padding:0.5rem 2rem 0.5rem 2rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            @include break(b3){
+                margin-right:1.5rem;
+            }
+
+            &:hover{
+                background-color: rgb(63, 66, 212);
+                color:white;
+                border:3px solid rgb(63, 66, 212);
+            }
+            &:active{
+                transform: translate(1px,1px);
+            }
+        }
+        &-signup{
+            font-size:1.85rem;
+            border:2px solid rgb(63, 66, 212);
+            margin:auto 1.5rem;
+            border-radius:1rem;
+            background-color: rgb(63, 66, 212);
+            color:#fff;
+            padding:0.5rem 2rem 0.5rem 2rem;
+            cursor:pointer;
+            transition: all 0.2s;
+
+            @include break(b3){
+                margin-left:0.5rem;
+            }
+
+            &:hover{
+                background-color: white;
+                color:rgb(63, 66, 212);
+                border:3px solid rgb(63, 66, 212);
+            }
+            &:active{
+                transform: translate(1px,1px);
+            }
+        }
+    }
+    &-4{
+        display:none;
+
+        &:hover{
+            @include break(b4){
+                display: flex;
+                flex-direction: column;
+                background-color: rgba(63, 66, 212,0.7);
+                height:6rem;
+                width:6rem;
+                margin:auto;
+                margin-right:2rem;
+                clip-path:circle(40% at 50% 50%);
+                align-content: center;
+                justify-content: center;
+            }
+        }
+        @include break(b4){
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(63, 66, 212);
+            height:6rem;
+            width:6rem;
+            margin:auto;
+            margin-right:2rem;
+            clip-path:circle(40% at 50% 50%);
+            align-content: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        &-1{
+            border-bottom:3px solid white;
+            margin:auto;
+            content:"";
+            width:40%;
+            margin-bottom:-2rem;
+            &:hover{
+                transform: scale(1.02);
+            }
+        }
+        &-2{
+            padding:0.1rem;
+            width:40%;
+            content:"";
+            margin:auto;
+            border-top:3px solid white;
+            border-bottom:3px solid white;
+            &:hover{
+                transform: scale(1.02);
+            }
+        }
+    }
+}
+
+.header{
+    display:flex;
+    margin:7rem 5rem 5rem 5rem;
+    padding:5rem 0rem 0rem 0rem;
+
+    @include break(b8){
+        margin:7rem 1rem 5rem 1rem;
+    }
+
+    &-content{
+        width:55%;
+        text-align: start;
+        position: relative;
+
+        @include break(b2){
+            width:60%;
+        }
+        @include break(b4){
+            width:85%;
+            margin:auto;
+        }
+        @include break(b6){
+            width:100%;
+        }
+
+        .svg{
+            fill: rgb(63, 66, 212);
+            margin:auto 1rem;
+            transform: translateY(25%);
+            vertical-align:center;
+            @include break(b6){
+                transform: translateY(15%);
+            }
+        }
+
+        &-1{
+            font-size:6rem;
+            font-family: "Playfair Display",sans-serif;
+            font-weight: 700;
+
+            @include break(b2){
+                font-size:5.2rem;
+            }
+            @include break(b3){
+                font-size:4.9rem;
+                line-height:5.5rem;
+            }
+            @include break(b6){
+                font-size:4.4rem;
+                line-height:4.9rem ;
+            }
+            @include break(b7){
+                font-size:3.5rem;
+                line-height: 3.9rem;
+            }
+            @include break(b9){
+                font-size:3.4rem;
+            }
+            
+        }
+        &-2{
+            color:#666;
+            font-size:2.2rem;
+            margin:2rem 2rem 2rem 0rem;
+            line-height: 2.5rem;
+            @include break(b3){
+                font-size:2rem;
+            }
+            @include break(b6){
+                font-size:1.5rem;
+                line-height:1.8rem ;
+            }
+            @include break(b7){
+                font-size:1.2rem;
+                line-height: 1.5rem;
+            }
+        }
+        &-3{
+            margin-top:1rem;
+            font-size: 1.5rem;
+            color:#222;
+            @include break(b7){
+                font-size:1.2rem;
+                line-height: 1.5rem;
+            }
+        }
+        
+
+        &-4{
+            height:5rem;
+            width:80%;
+            display: flex;
+            margin-top:5rem;
+            @include break(b7){
+                height: 3rem;
+            }
+
+            &-google{
+                height:100%;
+                width:30%;
+                margin-right: 2rem;
+                margin-bottom:2rem;
+                transform: translateY(-2rem);
+                .tag-images{
+                    height:100%;
+                    width:100%;
+                }
+            }
+        }
+        &-formholder{
+            border:1px solid #777;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 1rem;
+            height:7rem;
+            @include break(b6){
+                height:6rem;
+            }
+
+            .header-content-form{
+                height:7rem;
+                align-content: center;
+                position: relative;
+            }
+            
+            .button{
+                margin:auto;
+                border:1px solid white;
+                position: absolute;
+                right:0.5rem;
+                top:50%;
+                transform: translateY(-50%);
+                width:25%;
+                height:5rem;
+                transition:all 0.2s;
+
+                @include break(b3){
+                    padding:1rem;
+                    font-size:1.6rem;
+                }
+                @include break(b6){
+                    transform: translateY(-60%);
+                }
+                @include break(b6){
+                    font-size:1.3rem;
+                    height:4rem;
+                }
+                @include break(b9){
+                    font-size:1.15rem;
+                }
+
+                &:hover{
+                    background-color: white;
+                    color:rgb(63, 66, 212);
+                    border:3px solid rgb(63, 66, 212);
+                }
+                &:active{
+                    transform: translate(1px,1px);
+                }
+            }
+        }
+        &-input{
+            width:55%;
+            background-color: transparent;
+            height:7rem;
+            border:1px solid transparent;
+            ::placeholder{
+                font-size:2rem;
+                margin-left: 1rem;
+                color:#777;
+            }
+            @include break(b6){
+                transform: translateY(-0.5rem);
+            }
+        }
+    }
+
+    &-imageholder{
+        height:100%;
+        width:45%;
+        margin-left:7rem;
+        clip-path: polygon(0 10%,50% 0,100% 10%,100% 85%,50% 95%,0 85%);
+
+        @include break(b2){
+            height:30rem;
+            margin-left:5rem;
+        }
+        @include break(b4){
+            display: none;
+        }
+    
+        .header-image{
+            height:100%;
+            width:100%;
+            filter: brightness(0.85);
+        }
+    }
+}
+/////////////////////////////////////////
+/////////////////////////////////////////
+
+.container-2{
+    height: min-content;
+}
+.heading-box{
+    display:block;
+    width: 80%;
+    margin:auto;
+}
+
+.box-1{
+    margin-top:5rem;
+    height:10rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: baseline;
+
+    @include break(b5){
+        flex-direction: column;
+    }
+    @include break(b5){
+        margin-top:10rem;
+    }
+    // @include break(b8){
+    //     padding-left:3rem;
+    // }
+    
+
+    &-1{
+        height:40%;
+        @include break(b3){
+            height:30%;
+        }
+        @include break(b5){
+            margin-bottom: 2rem;
+            margin-top:2rem;
+            height:25%;
+        }
+        @include break(b6){
+            height:20%
+        }
+    }
+    &-2{
+        height:65%;
+        @include break(b3){
+            height:50%;
+        }
+        @include break(b5){
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            height:55%;
+        }
+        @include break(b6){
+            height:45%
+        }
+    }
+    &-3{
+        height:60%;
+        @include break(b3){
+            height:50%;
+        }
+        @include break(b5){
+             margin-top:2rem;
+             margin-bottom: 2rem;
+        }
+        @include break(b6){
+            height:40%
+        }
+    }
+
+    &-image{
+        height:100%;
+    }
+
+    &-heading{
+        margin-top:10rem;
+        margin-left:40%;
+        display: inline-block;
+        font-size:2.5rem;
+        padding-bottom: -1rem;
+        letter-spacing: 3px;
+        border-bottom:3px solid rgb(63, 66, 212);
+
+        @include break(b3){
+            margin-left:35%;
+        }
+        @include break(b5){
+            margin-left:30%;
+        }
+        @include break(b6){
+            margin-left: 27%;
+            font-size:2.1rem;
+        }
+        @include break(b7){
+            margin-left:15%;
+        }
+        @include break(b8){
+            font-size:1.7rem;
+        }
+        @include break(b9){
+            margin-left:10%;
+        }
+    }
+}
+
+.box-2{
+    height:min-content;
+    margin:12rem 0 12rem 0;
+
+    &-heading{
+        color:rgb(63, 66, 212);
+        font-size: 4rem;
+        padding:0rem;
+        font-weight: 500;
+        margin-left:6rem;
+
+        @include break(b4){
+            font-size:3.3rem;
+        }
+        @include break(b6){
+            font-size:2.8rem;
+        }
+        @include break(b7){
+            font-size:2rem;
+            line-height: 2.4rem;
+            margin-bottom: 2rem;
+        }
+        @include break(b5){
+            margin-left:4rem;
+         }
+         @include break(b8){
+            margin-left:3rem;
+        }
+        
+    }
+
+    &-subheading{
+        margin-top: -2rem;
+        font-size:4.8rem;
+        line-height: 5.5rem;
+
+        @include break(b4){
+            font-size:4rem;
+            line-height:4.7rem;
+        }
+        @include break(b6){
+            font-size:3.2rem;
+            line-height:3.9rem ;
+        }
+        @include break(b8){
+            font-size:2.85rem;
+            line-height: 3.4rem;
+        }
+    }
+
+    &-flex{
+        display: flex;
+        padding:0rem 6rem 0rem 6rem;
+        margin-right: 0rem;
+
+        @include break(b5){
+            padding:0rem 1rem 0rem 4rem;
+         }
+         @include break(b8){
+            padding-left:3rem;
+        }
+
+        &-1{
+            width:55%;
+            margin-right:4rem;
+            @include break(b5){
+               width:98%; 
+            }
+        }
+        &-2{
+            width:40%;
+            height:85%;
+            @include break(b5){
+                display: none;
+            }
+        }
+    }
+    &-image{
+        height: 100%;
+        width:100%;
+    }
+    &-info{
+        color:#777;
+        line-height: 2.5rem;
+        font-size:2rem;
+        margin-top:3rem;
+
+        @include break(b4){
+            font-size:1.7rem;
+            line-height: 2rem;
+        }
+        @include break(b6){
+            font-size:1.5rem;
+            line-height:1.8rem ;
+        }
+        @include break(b7){
+            // margin-left:2rem;
+        }
+    }
+}
+
+.box-3{
+    height: min-content;
+    margin-top: 7rem;
+    text-align: center;
+    background-color: rgba(63, 66, 212,0.7);
+    padding:7rem;
+    clip-path:polygon(0 0 , 100% 12%, 100% 88%, 0 100%);
+
+    @include break(b6){
+        padding:4rem 0rem 4rem 0rem;
+    }
+
+    &-info{
+        margin-top:3rem;
+        font-size: 3rem;
+        color:#fff;
+        line-height: 3.5rem;
+        padding:0rem 15% 0rem 15%;
+        @include break(b4){
+            font-size:2.5rem;
+            line-height:3rem;
+        }
+        @include break(b6){
+            font-size:2rem;
+            line-height: 2.4rem;
+            padding:0rem 10% 0rem 10%;
+        }
+        @include break(b7){
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            margin-top: 2.15rem;
+        }
+    }
+
+    &-heading{
+        font-size:5rem;
+        color:black;
+        @include break(b4){
+            font-size:4.2rem;
+        }
+        @include break(b5){
+            font-size:4rem;
+        }
+        @include break(b6){
+            font-size:3.2rem;
+        }
+        @include break(b7){
+            font-size: 2.5rem;
+        }
+    }
+}
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+
+.container-3{
+    height: min-content;
+   
+    .card-1{
+        border-radius:2rem;
+        width:92%;
+        background-color:rgb(221, 250, 192);
+        height:100%;
+        margin-top:15rem;
+        margin-left:3rem;
+        box-shadow:0rem 0rem 4rem #ccc;
+
+        @include break(b3){
+            width:50%;
+            margin:auto;
+            margin-top:15rem;
+        }
+        @include break(b5){
+            width:65%;
+        }
+        @include break(b6){
+            width:80%;
+            margin-left:10%;
+            margin-right: 10%;
+        }
+        @include break(b7){
+            width:90%;
+        }
+        @include break(b8){
+            width:100%;
+            margin-left:4%;
+        }
+
+        &-1{
+            height: 4%;
+            width: 70%;
+            margin:auto;
+
+            .card-image{
+                height:100%;
+                margin-top:-6rem;
+                width:100%;
+            }
+        }
+        &-2{
+            text-align: center;
+            &-type{
+                font-size:2.5rem;
+                color:#555;
+            }
+            &-profit{
+                font-size:6.5rem;
+                color:rgb(63, 66, 212);
+                font-weight: 700;
+                margin-top:-4rem;
+            }
+            &-cashback{
+                font-size:2rem;
+                margin-top:-4rem;
+                color:#777;
+            }
+        }
+        &-3{
+            background-color: #fff;
+
+            &-spots{
+                font-size:1.5rem;
+                padding-top:1rem;
+                margin:1rem 1rem 0rem 4rem;
+                color:#777;
+                text-align: start;
+                @include break(b2){
+                    font-size:1.3rem;
+                    margin-left:10%;
+                }
+                @include break(b3){
+                    font-size:1.7rem;
+                }
+                @include break(b4){
+                    font-size:1.5rem;
+                    margin-left:5rem;
+                }
+                @include break(b5){
+                    font-size:1.8rem;
+                    margin-left: 4rem;
+                }
+                @include break(b6){
+                    font-size:1.4rem;
+                }
+                @include break(b7){
+                    font-size:1.2rem;
+                }
+                @include break(b9){
+                    font-size:1rem;
+                }
+            }
+            &-slider{
+                content:"";
+                width:80%;
+                border-radius: 2rem;;
+                height:0.8rem;
+                background-image: linear-gradient(to right,rgb(221, 250, 192) 0%,rgb(221, 250, 192) 85% ,#eee 85%);
+                margin:3.5rem;
+                margin-top:0rem;
+            }
+            &-slider2{
+                border-radius: 2rem;
+                width:15%;
+                content: "";
+                display: inline-block;
+                height:0.8rem;
+                background-color: #eee;
+            }
+            &-button{
+                margin:auto;
+                margin-left:2rem;
+                padding:1.5rem 4rem 1.5rem 4rem;
+                width:90%;
+                background-color: rgb(63, 66, 212);
+                color:white;
+                font-size: 2rem;
+                border-radius: 1rem;
+                border:1px solid rgb(63, 66, 212);
+                transition: all 0.2s;
+                cursor:pointer;
+                @include break(b7){
+                    margin-left:1rem;
+                }
+                &:hover{
+                    background-color: white;
+                    color:rgb(63, 66, 212);
+                    border:3px solid rgb(63, 66, 212);
+                }
+            }
+            &-includes{
+                margin-left:2rem;
+                margin-top:2rem;
+                font-size:2rem;
+                letter-spacing: 3px;
+                color:#aaa;
+            }
+            &-list{
+                color:#444;
+                font-size:2rem;
+                @include break(b7){
+                    font-size: 1.6rem;
+                }
+                @include break(b8){
+                    font-size:1.4rem;
+                }
+
+                .svg-tick{
+                    height:3rem;
+                    width:3rem;
+                    transform: translateY(8px);
+                    padding-right:1rem;
+                }
+                
+                .list-items{
+                    margin-left:2rem;
+                    margin-bottom: -1rem;
+                    list-style-type: none;
+                }
+            }
+            &-info{
+                color:#777;
+                padding:2.5rem;
+                font-size: 1.5rem;
+                line-height: 2.2rem;
+
+                @include break(b8){
+                    font-size:1.3rem;
+                    line-height: 1.9rem;
+                    padding:2.2rem;
+                }
+            }
+        }
+        &-4{
+            height:min-content;
+            text-align: center;
+            background-color: rgba(100, 232, 173,0.5);
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+
+            &-cut{
+                font-size:2rem;
+                text-decoration: line-through;
+            }
+            &-offer{
+                margin-top:1rem;
+                color:green;
+                font-size: 3.5rem;
+                line-height: 3rem;
+                border-bottom-left-radius: 2rem;
+                border-bottom-right-radius: 2rem;
+            }
+        }
+    }
+}
+.flex{
+    display: flex;
+    padding:5rem 5rem 5rem 3rem;
+    flex-direction: row;
+
+    @include break(b3){
+        flex-direction: column;
+
+    }
+}
+.cashBack{
+    padding:0rem 1.5rem 0rem 1.5rem;
+
+}
+ ////////////////////////////////////////////////
+    /////////////////////////////////////////////////
+.options{
+    height: min-content;
+    display: none;
+
+    @include break(b3){
+        display: block;
+    }
+    &-box{
+        margin:auto;
+        width: min-content;
+        margin-top: 10rem;
+        margin-bottom: -5rem;
+    }
+
+    &-container{
+        height: 100%;
+        display: flex;
+        
+
+        &-1{
+            color:black;
+            font-size:2.5rem;
+            letter-spacing: 2px;
+            margin:2rem;
+            text-decoration: none;
+            cursor: pointer;
+            @include break(b6){
+                font-size:2rem;
+            }
+            @include break(b7){
+                font-size: 1.5rem;
+            }
+            &:hover{
+                border-bottom: 2px solid rgb(63, 66, 212);
+            }
+        }
+        &-2{
+            color:black;
+            font-size:2.5rem;
+            letter-spacing: 2px;
+            margin:2rem;
+            text-decoration: none;
+            cursor: pointer;
+            @include break(b6){
+                font-size:2rem;
+            }
+            @include break(b7){
+                font-size: 1.5rem;
+            }
+            &:hover{
+                border-bottom: 2px solid rgb(63, 66, 212);
+            }
+        }
+        &-3{
+            color:black;
+            font-size:2.5rem;
+            letter-spacing: 2px;
+            margin:2rem;
+            text-decoration: none;
+            cursor: pointer;
+            @include break(b6){
+                font-size:2rem;
+            }
+            @include break(b7){
+                font-size: 1.5rem;
+            }
+            &:hover{
+                border-bottom: 2px solid rgb(63, 66, 212);
+            }
+        }
+    }
+}
+.dropdown{
+    display:none;
+    z-index:100;
+    position:fixed;
+    top:7rem;
+    background-color: rgba(0,0,0,0.91);
+    width:100%;
+    height:100vh;
+
+    &-out{
+        height:5rem;
+        width:5rem;
+        background-color: rgb(255,118,232);
+        position: absolute;
+        top:2rem;
+        right:2rem;
+        color:white;
+        text-align: center;
+        align-items: center;
+        padding-top:0rem;
+        font-size:3rem;
+        clip-path: circle(50% at 50% 50%);
+        transition:all 0.2s;
+        cursor: pointer;
+        &:hover{
+            background-color: white;
+            color:rgb(63, 66, 212);
+        }
+    }
+
+    &-box{
+        z-index:200;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        
+        &-items{
+            font-size:3rem;
+            padding-bottom: 0rem;
+            transition: all 0.2s;
+            height: 6rem;
+            margin-bottom:2rem;
+
+            &:hover{
+                border-bottom:2px solid rgb(63, 66, 212);
+                transform: scale(1.02);
+            }
+
+            .links{
+                color:white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+

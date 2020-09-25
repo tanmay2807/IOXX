@@ -1,43 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;600;700&family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <title>React App</title>
   </head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <section class="container-1">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+      <div class="navigation">
+
+        <div class="navigation-1"><svg style="fill:rgb(63, 66, 212);" width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" fill-rule="evenodd" clip-rule="evenodd"><path serif:id="shape 24" d="M12 0l-11 6v12l11 6 11-6v-12l-11-6zm-9 16.813v-9.626l9-4.908 9 4.908v9.626l-9 4.909-9-4.909z"/></svg>
+          ONJUNO</div>
+        <div class="navigation-2">
+          <a href="" class="navigation-2-links navigation-2-active">Home</a>
+          <a href="" class="navigation-2-links">Company
+            <i class="fa fa-caret-down"></i>
+          </a>
+          <a href="" class="navigation-2-links">Learn
+            <i class="fa fa-caret-down"></i>
+          </a>
+          <a href="" class="navigation-2-links">Legal
+            <i class="fa fa-caret-down"></i>
+          </a>
+        </div>
+        <div class="navigation-3">
+          <div class="navigation-3-login">Login</div>
+          <div class="navigation-3-signup">Signup</div>
+        </div>
+
+        <div class="navigation-4" onclick="dropDown()">
+          <div class="navigation-4-1"></div>
+          <div class="navigation-4-2"></div>
+        </div>
+
+      </div>
+
+      <div class="dropdown">
+        <div class="dropdown-out" onclick="dropUp()">X</div>
+        <div class="dropdown-box">
+          <div class="dropdown-box-1 dropdown-box-items"><a class="links" href="#" class="links">HOME</a></div>
+          <div class="dropdown-box-2 dropdown-box-items"><a class="links" href="#" class="links">COMPANY</a> </div>
+          <div class="dropdown-box-3 dropdown-box-items"><a class="links" href="#" class="links">LEARN</a> </div>
+          <div class="dropdown-box-4 dropdown-box-items"><a class="links" href="#" class="links">LEGAL</a></div>
+        </div>
+      </div>
+
+      <div class="header">
+
+        <div class="header-content">
+
+          <div class="header-content-1">The Most Powerful Checking Account</div>
+          <div class="header-content-2">Our checking account gives you higher returns<br> than a savings account with no hidden fees.</div>
+        
+          <div class="header-content-formholder">
+            <form class="header-content-form" action="/" method="post">
+              <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+              <input class="header-content-input" type="text" name="" id="" placeholder="Enter Email Address">
+              <button class="navigation-3-signup button" type="submit">Join Now</button>
+            </form>
+          </div>
+          
+          <p class="header-content-3">337 spots left for Priority Access</p>
+          <div class="header-content-4">
+            <div class="header-content-4-google">
+              <img class ="tag-images" src="https://juno-public.s3-us-west-1.amazonaws.com/Juno/googleplay%403x.png" data-srcset="https://juno-public.s3-us-west-1.amazonaws.com/Juno/googleplay.png 1x
+              https://juno-public.s3-us-west-1.amazonaws.com/Juno/googleplay%402x.png 2x
+              https://juno-public.s3-us-west-1.amazonaws.com/Juno/googleplay%403x.png 3x" alt="Google Play" >
+            </div>
+            <div class="header-content-4-google">
+              <img class ="tag-images" src="https://juno-public.s3-us-west-1.amazonaws.com/Juno/applepay%403x.png" data-srcset="https://juno-public.s3-us-west-1.amazonaws.com/Juno/applepay.png 1x
+                        https://juno-public.s3-us-west-1.amazonaws.com/Juno/applepay%402x.png 2x
+                        https://juno-public.s3-us-west-1.amazonaws.com/Juno/applepay%403x.png 3x" alt="Apple Pay">
+            </div>
+          </div>
+        </div>
+
+        <div class="header-imageholder">
+          <img class="header-image" src="images/header.jfif" alt="" srcset="">
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="container-2">
+
+        <div class="heading-box">
+          <div class="box-1-heading">BACKED BY THE BEST</div>
+        </div>
+      
+
+      <div class="box-1">
+        <div class="box-1-1">
+          <img src="https://juno-public.s3-us-west-1.amazonaws.com/Juno/sequioa-image%403x.png" data-srcset="https://juno-public.s3-us-west-1.amazonaws.com/Juno/sequioa-image.png 1x 
+                    https://juno-public.s3-us-west-1.amazonaws.com/Juno/sequioa-image%402x.png 2x 
+                    https://juno-public.s3-us-west-1.amazonaws.com/Juno/sequioa-image%403x.png 3x" alt="sequioa-image" class="box-1-image">
+        </div>
+        <div class="box-1-2">
+          <img src="https://juno-public.s3-us-west-1.amazonaws.com/Juno/polychain-capital%403x.png" data-srcset="https://juno-public.s3-us-west-1.amazonaws.com/Juno/polychain-capital.png 1x
+                    https://juno-public.s3-us-west-1.amazonaws.com/Juno/polychain-capital%402x.png 2x
+                    https://juno-public.s3-us-west-1.amazonaws.com/Juno/polychain-capital%403x.png 3x" alt="Polychain Capital" class="box-1-image">
+        </div>
+        <div class="box-1-3">
+          <img src="https://juno-public.s3-us-west-1.amazonaws.com/Juno/consensys-logo%403x.png" data-srcset="https://juno-public.s3-us-west-1.amazonaws.com/Juno/consensys-logo.png 1x
+                    https://juno-public.s3-us-west-1.amazonaws.com/Juno/consensys-logo%402x.png 2x
+                    https://juno-public.s3-us-west-1.amazonaws.com/Juno/consensys-logo%403x.png 3x" alt="Consensys" class="box-1-image">
+        </div>
+      </div>
+
+      <div class="box-2">
+        <div class="box-2-heading">Start saving for a rainy day fund</div>
+        <div class="box-2-flex">
+          <div class="box-2-flex-1">
+            <div class="header-content-1 box-2-subheading">Use Our Checking Account To Achieve Your Financial Goals</div>
+            <p class="box-2-info">With the latest Federal rate cut, the largest banks are offering close to 0% APY on their checking and savings accounts. OnJuno checking will earn you more than 20x the national average*. Deposits up to $250,000 are FDIC insured through our partner bank. Grow your idle money faster with our checking account and start saving towards a rainy day fund, big expense, or vacation.</p>
+          </div>
+          <div class="box-2-flex-2">
+            <img src="https://juno-public.s3-us-west-1.amazonaws.com/Juno/svg/juno-apy-215.svg" alt="Cashback" class="box-2-image" data-v-25a3615c="">
+          </div>
+        </div>
+       
+      </div>
+
+      <div class="box-3">
+        <div class="header-content-1 box-3-heading">Sign up early to <div style="display: inline-block;color:rgb(255,118,232)">save more</div></div>
+        <div class="box-3-info">Depending on the level of your checking account, you’ll earn between 1.15% to 2.15% bonus rate.</div>
+      </div>
+
+    </section>
+
+    <div class="options">
+      <div class="options-box">
+        <div class="options-container">
+          <a class="options-container-1" href="#METAL" >METAL</a>
+          <a class="options-container-2" href="#PREMIUM" >PREMIUM</a>
+          <a class="options-container-3" href="#BASIC" >BASIC</a>
+        </div>
+      </div>
+    </div>
+
+      <div id="root"></div>
+       <script src="../src/index.js"></script>
+       <script >
+
+         function dropDown(){
+          document.getElementsByClassName("dropdown")[0].style.display= 'block';
+         };
+         function dropUp(){
+           document.getElementsByClassName("dropdown")[0].style.display= 'none';
+         };
+
+       </script>
+    
   </body>
+
 </html>

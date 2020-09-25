@@ -1,0 +1,51 @@
+const Information = [
+    {
+        id:"1",
+        img: "https://juno-public.s3-us-west-1.amazonaws.com/Juno/juno-black-card%403x.png",
+        type: "METAL",
+        profit: "2.15%",
+        cashback: "5%",
+        spots: "2500",
+        button: "Sign Up Now",
+        includes: "Charcoal Black Metal Card",
+        amount: "$1000",
+        cutText: "$11.9/m Membership Free",
+        offer: "Free for 6 months",
+        offer2: "$60 Savings",
+        status: "rgb(221, 250, 192)",
+        buttonColor: "rgb(63, 66, 212)",
+    },
+    {
+        id:"2",
+        img: "https://juno-public.s3-us-west-1.amazonaws.com/Juno/juno-plus%403x.png", 
+        type: "PREMIUM",
+        profit: "1.65%",
+        cashback: "4%",
+        spots: "2000",
+        button: "Up Next",
+        includes: "Free Debit Card",
+        amount: "$500",
+        cutText: "$6.99/m Membership Free",
+        offer: "Coming soon",
+        offer2: "",
+        status: "#ddd",
+        buttonColor: "#ddd"
+    },
+    {
+        id:"3",
+        img: "https://juno-public.s3-us-west-1.amazonaws.com/Juno/juno-basic%403x.png", 
+        type: "BASIC",
+        profit: "1.15%",
+        cashback: "3%",
+        spots: "10000",
+        button: "Coming Soon",
+        includes: "Free Debit Card",
+        amount: "$0.00",
+        cutText: "No Membership Fee",
+        offer: "Free Forever!",
+        offer2: "",
+        status: "#ddd",
+        buttonColor: "#ddd"
+    }
+];
+ export default Information;

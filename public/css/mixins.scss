@@ -1,0 +1,38 @@
+@mixin break($break1){
+    @if $break1 == b1 {
+        @media only screen and (max-width:5000px)
+        {@content};
+    }
+    @if $break1 == b2 {
+        @media only screen and (max-width:1172px)
+        {@content};
+    }
+    @if $break1 == b3 {
+        @media only screen and (max-width:995px)
+        {@content};
+    }
+    @if $break1 == b4 {
+        @media only screen and (max-width:898px)
+        {@content};
+    }
+    @if $break1 == b5 {
+        @media only screen and (max-width:750px)
+        {@content};
+    }
+    @if $break1 == b6 {
+        @media only screen and (max-width:600px)
+        {@content};
+    }
+    @if $break1 == b7 {
+        @media only screen and (max-width:450px)
+        {@content};
+    }
+    @if $break1 == b8 {
+        @media only screen and (max-width:402px)
+        {@content};
+    }
+    @if $break1 == b9 {
+        @media only screen and (max-width:345px)
+        {@content};
+    }
+}
